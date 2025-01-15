@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio showcasing my journey from hospitality to web development.">
+  <meta name="keywords" content="web development, portfolio, projects, transition to tech, coding, design">
+  <meta name="author" content="Your Name">
+  <title>OscarGG Portfolio</title>
+  
+  <!-- PicoCSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+
+  <!-- Additional Styles -->
+  <style>
+    /* Smooth scrolling for the entire page */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* General */
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+      background-color: #121212;
+      color: #E0E0E0;
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 1.5rem 1rem; /* Reduced padding for a more compact header */
+      background: linear-gradient(135deg, #0D6EFD, #6F42C1);
+      color: #FFFFFF;
+    }
+
+    /* Navbar */
+    nav {
+      background: #1E1E1E;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      z-index: 1000;
+    }
+    nav ul {
+      display: flex;
+      flex-wrap: wrap; /* Allows items to wrap if needed */
+      justify-content: space-between;
+      margin: 0;
+      padding: 0.2rem 0.5rem; 
+      gap: 0.2rem;
+      list-style-type: none; /* Remove bullets if desired */
+    }
+    nav a {
+      color: #0D6EFD;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    nav a[role="button"] {
+      padding: 0.4rem 0.8rem;
+      background-color: #0D6EFD;
+      color: #FFFFFF;
+      border-radius: 4px;
+      text-align: center;
+      white-space: nowrap; /* Prevents button text from wrapping */
+    }
+
+    /* About Me section */
+    .about img {
+      width: 300px;
+      height: 300px;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 2rem;
+      margin: 1rem 0;
+      object-fit: cover; /* Ajusta la imagen para llenar el contenedor */
+      object-position: center; /* Centra la parte visible de la imagen */
+    }
+
+     /* Resaltar el bloque de cita */
+    .highlighted-quote {
+        background-color: #1e1e1e;     /* Color de fondo */
+        border-left: 4px solid #0D6EFD;/* Barra izquierda */
+        padding: 1rem;                /* Espacio interno */
+        margin: 1rem auto;            /* Separación arriba/abajo y centrado horizontal */
+        max-width: 600px;             /* Ancho máximo para no ocupar todo */
+        font-style: italic;           /* Cursiva para citar */
+        color: #E0E0E0;               /* Color de texto */
+    }
+
+    /* Random Image section */
+    #dynamic-image {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    #dynamic-image img {
+      max-width: 300px;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Skills section */
+    #skills ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+    }
+
+    /* Portfolio section */
+    .portfolio img {
+      max-width: 50%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .portfolio img:hover {
+      transform: scale(1.05);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      color: #6F42C1;
+    }
+
+    /* "Back to top" placed below footer */
+    .back-to-top-container {
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .back-to-top-container a {
+      background-color: #0D6EFD;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+    .back-to-top-container a:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <!-- A named anchor at the top to allow scrolling up -->
+  <a id="top"></a>
+
+  <!-- Navbar -->
+  <nav class="container-fluid">
+    <ul>
+      <!-- Optionally place your logo or name here -->
+    </ul>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact" role="button">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+    <p>Discover my journey from hospitality to web development.</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- About Me Section -->
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <img src="imggg.jpg" alt="Your Photo">
+      <p>
+        Hi, my name is Oscar. I am transitioning from the hospitality industry to 
+        web development, a field I am deeply passionate about. 
+        I am teaching myself everything necessary to excel in this sector and 
+        contribute with valuable solutions. My goal is to create impactful digital 
+        experiences and tackle technical challenges with creativity and determination.
+      </p>
+    </section>
+
+    <!-- Random Image Section -->
+    <section id="dynamic-image">
+        <blockquote class="highlighted-quote">
+          "I believe in the power of discipline and 
+          focus to turn challenges into opportunities for learning."
+        </blockquote>
+        <img src="" alt="Random Samurai Cyborg Developer" id="generated-image">
+      </section>
+      
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML5, CSS3, JavaScript</li>
+        <li>Vite + React</li>
+        <li>Node.js, Express</li>
+        <li>Databases (Supabase, MongoDB, MySQL)</li>
+        <li>GitHub</li>
+        <li>Prompt Engineering</li>
+      </ul>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+      <h2>My Projects</h2>
+      <div class="grid">
+        <figure>
+            <!-- Envolvemos la imagen en la etiqueta <a> -->
+            <a href="https://bar-management.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <img src="bar-manager.png" alt="Project 1: Bar Manager">
+            </a>
+            <figcaption>Bar-Manager</figcaption>
+          </figure>
+          
+          <figure>
+            <a href="https://ticket-scanner-beige.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <img src="ticket.png" alt="Project 2: Interactive Web App">
+              <figcaption>Ticket-Scanner</figcaption>
+            </a>
+          </figure>
+          
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" aria-label="Testimonials">
+      <h2>Testimonials</h2>
+      <blockquote>
+        “Working with [Your Name] was amazing. Their ability to solve problems and adapt is extraordinary.” – Client
+      </blockquote>
+      <blockquote>
+        “[Your Name] brings incredible dedication and creativity to every project.” – Former Colleague
+      </blockquote>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" aria-label="Contact Form">
+      <h2>Contact</h2>
+      <!-- FORM WITH mailto FUNCTIONALITY -->
+      <form 
+        action="mailto:ogg@live.com.ar" 
+        method="POST" 
+        enctype="text/plain" 
+        class="grid"
+      >
+        <input 
+          type="text" 
+          id="firstname" 
+          name="firstname" 
+          placeholder="Your Name" 
+          aria-label="Your Name" 
+          required
+        />
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="Your Email" 
+          aria-label="Your Email" 
+          required
+        />
+        <textarea 
+          id="message" 
+          name="message" 
+          placeholder="Your Message" 
+          aria-label="Your Message" 
+          required
+        ></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <small>
+      Created with ❤️ by oscar GG •
+      <a href="https://github.com/Crotoconlaptop/" target="_blank" rel="noopener noreferrer">GitHub</a> •
+      <a href="https://www.linkedin.com/in/oscar-gomez-giordano/" target="_blank" rel="noopener noreferrer">LinkedIn</a> •
+      <a href="https://www.instagram.com/oscargomezgiordano/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </small>
+  </footer>
+  
+
+  <!-- "Back to top" below the footer -->
+  <div class="back-to-top-container">
+    <a href="#top" role="button">Back to top</a>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      // Array of 9 images (local or external URLs)
+      const images = [
+        "img1.png", 
+        "img2.png", 
+        "img3.png",
+        "img4.png",
+        "img5.png",
+        "img6.png",
+        "img7.png",
+        "img8.png",
+        "img9.png"
+      ];
+
+      // Pick a random image
+      const randomImage = images[Math.floor(Math.random() * images.length)];
+
+      // Assign to the <img> tag in #generated-image
+      const imgElement = document.getElementById('generated-image');
+      imgElement.src = randomImage;
+    });
+  </script>
+</body>
+</html>
